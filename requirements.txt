@@ -1,7 +1,8 @@
 streamlit
 pandas
 numpy
+altair
+openpyxl
+reportlab
 scikit-learn
 xgboost
-reportlab
-openpyxl
