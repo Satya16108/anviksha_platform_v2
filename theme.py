@@ -9,7 +9,13 @@ esc = html.escape
 CSS = """<style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,wght@1,500;1,600&display=swap');
 html,body,[class*="css"],.stApp{font-family:'Inter',sans-serif}
-.block-container{padding-top:1.2rem;max-width:1250px}
+.block-container{padding-top:1.2rem;max-width:1500px;padding-bottom:3rem}
+[data-testid="stMetric"],[data-testid="stVerticalBlockBorderWrapper"]{border-radius:12px}
+[data-testid="stTabs"] button{font-weight:600;color:#526174}
+[data-testid="stTabs"] button[aria-selected="true"]{color:#0E9F8E;border-bottom-color:#0E9F8E}
+[data-testid="stDataFrame"]{border:1px solid #E3E9F2;border-radius:10px;overflow:hidden}
+.panel-title{font-size:1rem;font-weight:700;color:#0B1F3A;border-bottom:1px solid #E8EDF3;padding-bottom:.45rem;margin-bottom:.65rem}
+[data-testid="stAlert"]{border-radius:10px}
 [data-testid=stSidebar]{background:#0B1F3A}
 [data-testid=stSidebar] label p,[data-testid=stSidebar] h1,[data-testid=stSidebar] .stRadio p,[data-testid=stSidebar] .stCheckbox p{color:#E8EEF7!important}
 .brand{font-size:1.55rem;font-weight:700;color:#fff;letter-spacing:.5px}.brand b{color:#F5A524}
