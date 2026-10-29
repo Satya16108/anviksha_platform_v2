@@ -10,7 +10,6 @@ ALIAS = {"date": ["invoice_date", "voucher_date"], "customer": ["party", "party_
 today = lambda: pd.Timestamp.today().normalize()
 week = lambda: today().strftime("%G-W%V")
 
-
 # ---------- 1-2. upload, clean, privacy ----------
 def clean(df):
     df = df.copy(); df.columns = [str(c).strip().lower().replace(" ", "_") for c in df.columns]
