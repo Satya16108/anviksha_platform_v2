@@ -4,7 +4,33 @@ import altair as alt, pandas as pd, streamlit as st
 import core as C, theme as T
 
 P = T.PALETTE
-st.set_page_config("SPARK · Anviksha", "⚡", layout="wide"); T.inject(); C.ROOT.mkdir(exist_ok=True)
+
+st.set_page_config("SPARK · Anviksha", "⚡", layout="wide")
+T.inject()
+
+# Hide Streamlit's top header and toolbar
+st.markdown("""
+<style>
+    header[data-testid="stHeader"] {
+        display: none !important;
+    }
+
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+
+    [data-testid="stDecoration"] {
+        display: none !important;
+    }
+
+    .block-container {
+        padding-top: 0rem !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+C.ROOT.mkdir(exist_ok=True)
+
 PAGES = ["Overview", "1 · Upload & clean", "2 · Analyse & explain", "3 · Consultant review", "4 · Owner decisions", "5 · Tracker & outcomes"]
 STEP = dict(zip(PAGES[1:], (0, 2, 4, 5, 6)))
 with st.sidebar:
