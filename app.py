@@ -4,7 +4,6 @@ import altair as alt, pandas as pd, streamlit as st
 import core as C, theme as T
 
 P = T.PALETTE
-
 st.set_page_config("SPARK · Anviksha", "⚡", layout="wide")
 T.inject()
 
@@ -30,8 +29,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 C.ROOT.mkdir(exist_ok=True)
-
-PAGES = ["Overview", "1 · Upload & clean", "2 · Analyse & explain", "3 · Consultant review", "4 · Owner decisions", "5 · Tracker & outcomes"]
+PAGES = ["Overview", "1 · Upload & clean", "2 · Analyse & explain", "3 · Consultant review", "4 · Owner decisions", "5 · Tracker & outcomes", "6 · AI decision assistant", "7 · Forecast & optimization"]
 STEP = dict(zip(PAGES[1:], (0, 2, 4, 5, 6)))
 with st.sidebar:
     T.brand(); st.write("")
